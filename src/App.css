@@ -18,6 +18,7 @@ body {
 .container {
   max-width: 1240px;
   margin: auto;
+  position: relative
 }
 .d_flex {
   display: flex;
@@ -83,8 +84,8 @@ button {
   border-radius: 5px;
   margin-top: 5px;
   position: absolute;
-  left: 100px;
-  top: 200px;
+  left: 0px;
+  top: 60px;
   z-index: 9;
 }
 
@@ -247,6 +248,30 @@ button {
   color: white;
   cursor: pointer;
 }
+
+.slider-main .prev,
+.slider-main .next {
+  border: 1px solid #0f3460;
+  background: transparent;
+}
+
+.slider-main .prev i,
+.slider-main .next i{
+  color: #0f3460;
+}
+
+.control-btn .prev:hover,
+.control-btn .next:hover {
+  background: #0f3460;
+  color: white;
+  cursor: pointer;
+}
+
+.control-btn .prev:hover i,
+.control-btn .next:hover i {
+  color: white;
+}
+
 /*----- control btn -------*/
 /*----- heading -------*/
 .heading .heading-left i {

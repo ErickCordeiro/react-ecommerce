@@ -3,6 +3,7 @@ import "./App.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Header from "./common/header/Header"
 import Pages from "./pages/Pages"
+import Vitrine from './pages/Vitrine'
 import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
@@ -75,7 +76,10 @@ function App() {
           <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
           </Route>
-          <Route path='/cart' exact>
+          <Route path='/produtos' exact>
+            <Vitrine productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
+          </Route>
+          <Route path='/carrinho' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
         </Switch>

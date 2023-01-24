@@ -7,9 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 const SampleNextArrow = (props) => {
   const { onClick } = props
   return (
-    <div className='control-btn' onClick={onClick}>
+    <div className='control-btn slider-main' onClick={onClick}>
       <button className='next'>
-        <i className='fa fa-long-arrow-alt-right'></i>
+        <i className='fa fa-angle-right'></i>
       </button>
     </div>
   )
@@ -17,9 +17,9 @@ const SampleNextArrow = (props) => {
 const SamplePrevArrow = (props) => {
   const { onClick } = props
   return (
-    <div className='control-btn' onClick={onClick}>
+    <div className='control-btn slider-main' onClick={onClick}>
       <button className='prev'>
-        <i className='fa fa-long-arrow-alt-left'></i>
+        <i className='fa fa-angle-left'></i>
       </button>
     </div>
   )
@@ -43,7 +43,7 @@ const SlideCard = () => {
       <Slider {...settings}>
         {Sdata.map((value, index) => {
           return (
-            <>
+            <div className="normalize">
               <div className="box d_flex top" key={index}>
                 <div className="left">
                   <h1>{value.title}</h1>
@@ -54,7 +54,7 @@ const SlideCard = () => {
                   <img src={value.cover} alt="" />
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
       </Slider>

@@ -21,10 +21,10 @@
   height: auto;
 }
 .search .width {
-  width: 35%;
+  width: 10%;
 }
 .search-box {
-  width: 50%;
+  width: 45%;
   border: 2px solid rgba(0, 0, 0, 0.1);
   /*padding: 10px;*/
   border-radius: 50px;

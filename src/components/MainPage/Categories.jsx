@@ -51,7 +51,6 @@ const Categories = () => {
 
   return (
     <>
-      <div className='overlay'></div>
       <div className='category_top'>
         {data.map((value, index) => {
           return (

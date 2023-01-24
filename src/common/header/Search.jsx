@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../components/assets/images/logo.svg";
 import { Link } from "react-router-dom";
+import { Modal } from "../../components/modal/Modal";
 
 const Search = ({ CartItem }) => {
   // fixed Header
@@ -14,12 +15,21 @@ const Search = ({ CartItem }) => {
     0
   );
 
+  const [modal, setModal] = useState(false);
+
+  const handleShowModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <>
+      {modal && <Modal />}
       <section className="search">
         <div className="container c_flex">
-          <div className="logo width ">
-            <img src={logo} alt="" />
+          <div className="logo width">
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </div>
 
           <div className="search-box f_flex">
@@ -27,17 +37,27 @@ const Search = ({ CartItem }) => {
             <input type="text" placeholder="Pesquisar por..." />
           </div>
 
-          <div className="icon f_flex width">
-            <i className="fa fa-user icon-circle"></i>
+          <div className="icon f_flex">
             <div
-              style={{ marginTop: "6px", marginLeft: "8px", fontSize: "12px" }}
+              className="f_flex"
+              style={{ cursor: "pointer" }}
+              onClick={handleShowModal}
             >
-              <span>Faça o Login</span>
-              <br />
-              <span>ou Cadastre-se</span>
+              <i className="fa fa-user icon-circle"></i>
+              <div
+                style={{
+                  marginTop: "6px",
+                  marginLeft: "8px",
+                  fontSize: "12px",
+                }}
+              >
+                <span>Faça o Login</span>
+                <br />
+                <span>ou Cadastre-se</span>
+              </div>
             </div>
 
-            <Link to="/cart">
+            <Link to="/carrinho">
               <div className="f_flex">
                 <div className="cart">
                   <i className="fa fa-shopping-bag icon-circle"></i>
