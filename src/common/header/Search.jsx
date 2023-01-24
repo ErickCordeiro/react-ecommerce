@@ -23,7 +23,7 @@ const Search = ({ CartItem }) => {
 
   return (
     <>
-      {modal && <Modal />}
+      {modal && <Modal handleShowModal={handleShowModal}/>}
       <section className="search">
         <div className="container c_flex">
           <div className="logo width">
