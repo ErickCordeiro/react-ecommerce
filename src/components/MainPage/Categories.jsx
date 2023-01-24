@@ -1,6 +1,7 @@
 import React from "react"
-
 const Categories = () => {
+
+
   const data = [
     {
       cateImg: "./images/category/cat1.png",
@@ -50,7 +51,8 @@ const Categories = () => {
 
   return (
     <>
-      <div className='category'>
+      <div className='overlay'></div>
+      <div className='category_top'>
         {data.map((value, index) => {
           return (
             <div className='box f_flex' key={index}>
